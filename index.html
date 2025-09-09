@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="nnn.js">
+        
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Sg-hQFVrhysdruzvl",
+      });
+   })();
+</script>
+<script src="index.css"></script>
+
+
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas&Beyond - Tours and Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+       
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #0078c8;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: #0078c8;
+            color: #fff;
+            border: 2px solid #0078c8;
+        }
+
+        .btn-primary:hover {
+            background-color: #005fa3;
+            border-color: #005fa3;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #0078c8;
+            border: 2px solid #0078c8;
+        }
+
+        .btn-secondary:hover {
+            background-color: #0078c8;
+            color: #fff;
+        }
+
+        .view-all-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #0078c8;
+        }
+
+        .nav-links a.active::after, .nav-links a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #0078c8;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bgm.png') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            flex: 1 0 200px;
+            position: relative;
+        }
+
+        .search-input i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .search-input input {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-input input:focus {
+            border-color: #0078c8;
+        }
+
+        .search-box button {
+            flex: 1 0 100%;
+            margin-top: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-info {
+            padding: 20px;
+        }
+
+        .service-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Tour Packages */
+        .tour-packages {
+            background-color: #f5f5f5;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .package-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .package-img {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .package-card:hover .package-img img {
+            transform: scale(1.1);
+        }
+
+        .package-duration {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background-color: rgba(0, 120, 200, 0.9);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .package-info {
+            padding: 20px;
+        }
+
+        .package-title {
+            margin-bottom: 15px;
+        }
+
+        .package-title h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .package-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #ffc107;
+        }
+
+        .package-rating span {
+            color: #666;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .package-details {
+            margin-bottom: 20px;
+        }
+
+        .package-details p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .package-features {
+            list-style: none;
+        }
+
+        .package-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+        }
+
+        .package-features i {
+            color: #0078c8;
+        }
+
+        .package-price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .package-price h4 {
+            font-size: 26px;
+            color: #0078c8;
+            margin-bottom: 5px;
+        }
+
+        .package-price span {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #fff;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .about-feature i {
+            font-size: 24px;
+            color: #0078c8;
+        }
+
+        .about-feature-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .about-feature-text p {
+            font-size: 14px;
+            color: #666;
+        }
+
+
+        /* Booking Section */
+        .booking-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('<a href="https://imgbb.com/"><img src="https://i.ibb.co/GvJR6v8T/tickets-booking.png" alt="tickets-booking" border="0"></a>') no-repeat center center/cover;
+            color: #fff;
+        }
+
+        .booking-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .booking-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .booking-text p {
+            margin-bottom: 30px;
+        }
+
+        .booking-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .booking-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #0078c8;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #f5f5f5;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            font-size: 20px;
+            color: #0078c8;
+        }
+
+        .contact-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .contact-text p {
+            color: #666;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #0078c8;
+            color: #fff;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #005fa3;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: #0078c8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #0078c8;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .footer-contact-item i {
+            color: #0078c8;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .about-content,
+            .booking-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-img {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links,
+            .nav-buttons {
+                display: none;
+            }
+
+            .nav-links.active,
+            .nav-buttons.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 30px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-input {
+                flex: 1 0 100%;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .hero {
+                height: 70vh;
+            }
+
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .packages-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                   <a href="https://ibb.co/mV26Hwvz"><img src="https://i.ibb.co/MxtMR48N/Logo.png" alt="Logo" border="0"></a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-buttons">
+                    <a href="#booking" class="btn btn-primary">Book Now</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+        <div>
+            <img class="responsive-image" src="https://i.ibb.co/KzfWT01k/Screenshot-2025-09-09-172825.png" alt="Description of the image"  style="width:100vw; height:100vh; object-fit:cover;"
+>
+
+
+
+    </div>
+
+    <!-- Hero Section -->
+     <section id="discover">
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <body style="background-image: url('https://ibb.co/355pKyM0');">
+    <!-- Your content here -->
+
+                
+                <h1>Discover the World with Ideas&Beyond</h1>
+                <p>Your journey to extraordinary destinations begins here</p>
+                <div class="search-box">
+                    <div class="search-input">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Where are you going?">
+                    </div>
+                    <div class="search-input">
+                        <i class="far fa-calendar-alt"></i>
+                        <input type="text" placeholder="Check-in - Check-out">
+                    </div>
+                    <div class="search-input">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Travelers">
+                    </div>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    
+    </body>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive travel solutions for all your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                      <a href="https://imgbb.com/"><img src="https://i.ibb.co/GvJR6v8T/tickets-booking.png" alt="tickets-booking" border="0"></a>
+                    </div>
+                    <div class="service-info">
+                        <h3>Flight & Train Booking</h3>
+                        <p>Book domestic and international flights and train tickets that too at economical prices with our easy booking system.</p>
+                        <a href="#booking" class="btn btn-secondary">Book Now</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                      <a href="https://ibb.co/MDmRtHsP"><img src="https://i.ibb.co/4ZHjXL74/stay.png" alt="stay" border="0"></a>
+                    </div>
+                    <div class="service-info">
+                        <h3>Hotel Accommodation</h3>
+                        <p>Find the perfect stay from our selection of hotels, resorts, and homestays across the globe.</p>
+                        <a href="#booking" class="btn btn-secondary">Book Now</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/cd7gMyM/packages.png" alt="packages" border="0"></a>
+                    </div>
+                    <div class="service-info">
+                        <h3>Travel Packages</h3>
+                        <p>Explore our curated travel packages for individuals, families, and groups to popular destinations.</p>
+                        <a href="#packages" class="btn btn-secondary">View Packages</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/C3MfHQVR/customtours-copy.png" alt="customtours-copy" border="0"></a>
+                    </div>
+                    <div class="service-info">
+                        <h3>Custom Tours</h3>
+                        <p>Create your own personalized travel itinerary with our expert travel consultants.</p>
+                        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages -->
+    <section id="packages" class="tour-packages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Best Tour Packages</h2>
+                <p>Discover our most popular travel packages</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-img">
+                        <a href="https://ibb.co/kdCr2tn"><img src="https://i.ibb.co/ZZDwz0s/inida.png" alt="inida" border="0"></a>
+                        <div class="package-duration">
+                            <i class="far fa-clock"></i>
+                            <span>7 Days</span>
+                        </div>
+                    </div>
+                    <div class="package-info">
+                        <div class="package-title">
+                            <h3>Historical India Tour</h3>
+                            <div class="package-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(48 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="package-details">
+                            <p>Explore India's rich cultural heritage through its historical monuments and ancient cities.</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 4-5 Star Accommodations</li>
+                                <li><i class="fas fa-check"></i> Breakfast & Dinner</li>
+                                <li><i class="fas fa-check"></i> Guided Tours</li>
+                                <li><i class="fas fa-check"></i> Airport Transfers</li>
+                            </ul>
+                        </div>
+                        <div class="package-price">
+                            <h4>₹49,999</h4>
+                            <span>per person + taxes</span>
+                            <a href="#booking" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-img">
+                        <a href="https://ibb.co/j9f5Gp79"><img src="https://i.ibb.co/zWx5bkKW/urban-gateways.png" alt="urban-gateways" border="0"></a>
+                        <div class="package-duration">
+                            <i class="far fa-clock"></i>
+                            <span>5 Days</span>
+                        </div>
+                    </div>
+                    <div class="package-info">
+                        <div class="package-title">
+                            <h3>Urban Exploration</h3>
+                            <div class="package-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(36 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="package-details">
+                            <p>Experience the vibrant city life with our urban exploration packages to metropolitan cities.</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Luxury City Hotels</li>
+                                <li><i class="fas fa-check"></i> City Tours</li>
+                                <li><i class="fas fa-check"></i> Shopping Experiences</li>
+                                <li><i class="fas fa-check"></i> Culinary Adventures</li>
+                            </ul>
+                        </div>
+                        <div class="package-price">
+                            <h4>₹29,999</h4>
+                            <span>per person + taxes</span>
+                            <a href="#booking" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-img">
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/N205DFQM/internationalgateways.png" alt="internationalgateways" border="0"></a>
+                        <div class="package-duration">
+                            <i class="far fa-clock"></i>
+                            <span>10 Days</span>
+                        </div>
+                    </div>
+                    <div class="package-info">
+                        <div class="package-title">
+                            <h3>International Getaway</h3>
+                            <div class="package-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(52 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="package-details">
+                            <p>Discover exotic international destinations with our all-inclusive vacation packages.</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> International Flights</li>
+                                <li><i class="fas fa-check"></i> Luxury Accommodations</li>
+                                <li><i class="fas fa-check"></i> Breakfast Included</li>
+                                <li><i class="fas fa-check"></i> Guided Excursions</li>
+                            </ul>
+                        </div>
+                        <div class="package-price">
+                            <h4>₹59,999</h4>
+                            <span>per person + taxes</span>
+                            <a href="#booking" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+    </section>
+
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-img">
+                       <a href="https://ibb.co/pjrwGm35"><img src="https://i.ibb.co/yFBPG387/Whats-App-Image-2025-08-23-at-13-31-49-1.jpg" alt="Whats-App-Image-2025-08-23-at-13-31-49-1" border="0"></a>
+                     
+                    </div>
+                    <div class="package-info">
+                        <div class="package-title">
+                            <h3>Rio Royale Karjat Resort</h3>
+                            <div class="package-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(126 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="package-details">
+                            <p>Rio Royale Karjat resort 
+
+have some room avilable
+
+ at discount rate 
+
+for this weekend 
+
+
+
+
+ 
+.</p>
+                            <ul class="package-features">
+                                                        
+                                <li><i class="fas fa-check"></i> Event Hosting</li>
+                                <li><i class="fas fa-check"></i> Fitness Center</li>
+                                <li><i class="fas fa-check"></i> Kids Play Zone</li>
+                                <li><i class="fas fa-check"></i> Swimming Pool</li>
+                                       <li><i class="fas fa-check"></i> Adventure Activities</li>
+                                <li><i class="fas fa-check"></i> Luxurious accommodations</li>
+                            
+                                <li><i ></i> Contact:</li>
+                                <li><i></i>Abbasi laxmidhar  
+9869138698 </li>
+                              
+                            </ul>
+                        </div>
+                        <div class="package-price">
+                            <h4></h4>
+                            <span>FOR MORE INFO CLICK BELOW</span>
+                            <a href="https://www.google.com/search?client=ms-android-oppo-terr1-rso2&sca_esv=f1d46e54a177805b&sxsrf=AE3TifNe2Evd4S295SwV0ZtI55NV2APXtw%3A1750076203948&kgmid=%2Fg%2F11f33kjjg9&q=Rio%20Royale&shndl=30&shem=lcuae%2Cuaasie&source=sh%2Fx%2Floc%2Funi%2Fm1%2F2&kgs=05c60249e5c05712" class="btn btn-primary">Click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-img">
+                        <a href="https://imgbb.com/"><img src="https://i.ibb.co/TQKjcYy/Screenshot-2025-09-01-162753.png" alt="Screenshot-2025-09-01-162753" border="0"></a>
+                        <div class="package-duration">
+                            <i class="far fa-clock"></i>
+                            <span>5 Days</span>
+                        </div>
+                    </div>
+                    <div class="package-info">
+                        <div class="package-title">
+                            <h3>Azerbaijan</h3>
+                            <div class="package-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(36 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="package-details">
+                            <p>Azerbaijan Delight – 4N Baku + 2N Shahdag (Day Trip to Quba)</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Day 1 – Arrive in Baku*
+Check in and relax. In the evening, walk along Baku Boulevard and enjoy the lighting show at Flame Towers.</li>
+                                <li><i class="fas fa-check"></i> Day 2 – Full Baku Tour*
+Explore the Old City, Carpet Museum, Nizami Street and the futuristic Heydar Aliyev Center. Optional: Enjoy a Caspian Sea boat ride.</li>
+                                <li><i class="fas fa-check"></i> Day 3 – Absheron Peninsula Highlights*
+Visit Fire Temple, Burning Mountain and the Bibi-Heybat Mosque. Later, explore the local bazaar for souvenirs and Azeri treats.</li>
+                                <li><i class="fas fa-check"></i> Day 4 – Transfer to Shahdag*
+Drive to Shahdag Mountain Resort. Check in, relax and enjoy views of snow-capped peaks or try some adventure sports.</li>
+    <li><i class="fas fa-check"></i> Day 5 – Day Trip to Quba*
+Visit Quba’s charming town, Qecresh forest, and witness the famous Quba mosque and apple orchards. Back to Shahdag for a cozy mountain evening.</li>
+                                <li><i class="fas fa-check"></i> Day 6 – Departure*
+Head back to Baku or directly to the airport depending on flight timing.</li>
+                            </ul>
+                        </div>
+                        <div class="package-price">
+                           
+                            
+                            <a href="#booking" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-img">
+                       <a href="https://ibb.co/355pKyM0"><img src="https://i.ibb.co/JWWvZRyz/Screenshot-2025-08-24-150803.png" alt="Screenshot-2025-08-24-150803" border="0"></a>
+                        <div class="package-duration">
+                            <i class="far fa-clock"></i>
+                            <span>10 Days</span>
+                        </div>
+                    </div>
+                    <div class="package-info">
+                        <div class="package-title">
+                            <h3>Custom Tours</h3>
+                            <div class="package-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(52 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="package-details">
+                            <p>Discover exotic international destinations with our all-inclusive vacation packages.</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> International Flights</li>
+                                <li><i class="fas fa-check"></i> Luxury Accommodations</li>
+                                <li><i class="fas fa-check"></i> All-Inclusive Meals</li>
+                                <li><i class="fas fa-check"></i> Guided Excursions</li>
+                            </ul>
+                        </div>
+                        <div class="package-price">
+                            <h4>Price may vary</h4>
+                            <span>per person</span>
+                            <a href="#booking" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-btn">
+                <a href="#" class="btn btn-secondary">View All Packages</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+  <a href="https://ibb.co/7tt4YcTF"><img src="https://i.ibb.co/k221HnrF/360-Service.jpg" alt="360-Service" border="0"></a>
+                </div>
+                <div class="about-text">
+                    <h2>About Ideas&Beyond</h2>
+                    <p>I-DEASINFINITE Launches Its New Venture – IDEAS & BEYOND <br>
+
+Your Trusted Travel Partner for Every Journey <br>
+
+After 7 years of delivering reliable IT Support & Services, I-DEASINFINITE is proud to introduce its latest business vertical <br>✈️ Ideas & Beyond - Turning Ideas into Destinations <br>
+
+
+A professionally managed travel solution for individuals, families, corporates, and spiritual groups.</p>
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-globe"></i>
+                            <div class="about-feature-text">
+                                <h4>Global Network</h4>
+                                <p>Partnerships with hotels, airlines, and local operators worldwide</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-rupee-sign"></i>
+                            <div class="about-feature-text">
+                                <h4>Best Prices</h4>
+                                <p>Competitive pricing and regular deals and discounts</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-headset"></i>
+                            <div class="about-feature-text">
+                                <h4>24/7 Support</h4>
+                                <p>Round-the-clock customer service for all your needs</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="about-feature-text">
+                                <h4>Secure Booking</h4>
+                                <p>Safe and secure payment options for peace of mind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-text">
+                    <h2>Book Your Next Adventure</h2>
+                    <p>Fill out the form to book your next trip with Ideas&Beyond. Our team will get back to you within 24 hours to confirm your booking and provide additional details.</p>
+                    <p>Whether you're looking for flight tickets, hotel accommodations, or complete travel packages, we've got you covered. Special discounts available for group bookings and early reservations.</p>
+                </div>
+                <div class="booking-form">
+                    <h3>Booking Form</h3>
+                    <form id="bookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Type</label>
+                                <select id="service" required>
+                                    <option value="">Select Service</option>
+                                    <option value="flight">Flight Booking</option>
+                                    <option value="train">Train Booking</option>
+                                    <option value="hotel">Hotel Booking</option>
+                                    <option value="package">Travel Package</option>
+                                    <option value="custom">Custom Tour</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="text" id="destination" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Travel Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Requirements</label>
+                            <textarea id="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" onclick="sendBookingMail()">Submit Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for any queries or feedback</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-text">
+                                <h4>Our Location</h4>
+                                <p> Borade House, office 506,5th floor, Goradia House Premises CSL, 100/104, Kazi Syed St, Khand Bazar, Vadgadi, Masjid Bandar West, Masjid Bandar, Mumbai, Maharashtra 400003</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p>+91 9892-826-152</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-text">
+                                <h4>Email Address</h4>
+                                <p>travel@ideasbeyond.in</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="contact-text">
+                                <h4>Working Hours</h4>
+                                <p>Monday - Saturday: 9:30 AM -6:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Your Email</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;"onclick="sendContactMail()">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ideas&Beyond</h3>
+                    <p>Your trusted partner for all your travel needs. We provide comprehensive travel solutions to make your journey memorable.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Flight Booking</a></li>
+                        <li><a href="#">Train Booking</a></li>
+                        <li><a href="#">Hotel Booking</a></li>
+                        <li><a href="#">Travel Packages</a></li>
+                        <li><a href="#">Custom Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p> office 506,5th floor, Goradia House Premises CSL, 100/104, Kazi Syed St, Khand Bazar, Vadgadi, Masjid Bandar West, Masjid Bandar, Mumbai, Maharashtra 400003</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+91 9876543210</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>travels@ideasbeyond.in</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ideas&Beyond. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const navButtons = document.querySelector('.nav-buttons');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    navButtons.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active');
+                });
+            }
+            
+            // Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (navLinks.classList.contains('active')) {
+                            navLinks.classList.remove('active');
+                            navButtons.classList.remove('active');
+                            mobileMenuBtn.classList.remove('active');
+                        }
+                    }
+                });
+            });
+            
+            // Sticky Header on Scroll
+            const header = document.querySelector('header');
+            let lastScrollTop = 0;
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 100) {
+                    header.classList.add('sticky');
+                    
+                    if (scrollTop > lastScrollTop) {
+                        // Scrolling down
+                        header.style.transform = 'translateY(-100%)';
+                    } else {
+                        // Scrolling up
+                        header.style.transform = 'translateY(0)';
+                    }
+                } else {
+                    header.classList.remove('sticky');
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            
+            // Form Submission
+            const bookingForm = document.getElementById('bookingForm');
+            const contactForm = document.getElementById('contactForm');
+            
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your booking request! Our team will contact you shortly.');
+                    bookingForm.reset();
+                });
+            }
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+            
+            // Service Card Hover Effect
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
