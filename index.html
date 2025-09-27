@@ -1375,34 +1375,41 @@ A professionally managed travel solution for individuals, families, corporates, 
                         
                     </div>
                 </div>
-                <div class="contact-form">
-                       <!-- Booking Section -->
-    
-  <!-- your form fields -->
-   <form id="contactForm" action="https://formspree.io/f/xeorowdy" method="POST">
-  <div class="form-group">
-    <label for="contactName">Your Name</label>
-    <input type="text" id="contactName" name="name" required>
-  </div>
-  <div class="form-group">
-    <label for="contactEmail">Your Email</label>
-    <input type="email" id="contactEmail" name="email" required>
-  </div>
-  <div class="form-group">
-    <label for="subject">Subject</label>
-    <input type="text" id="subject" name="subject" required>
-  </div>
-  <div class="form-group">
-    <label for="contactMessage">Your Message</label>
-    <textarea id="contactMessage" name="message" rows="5" required></textarea>
-  </div>
-
-  <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
-            </div>
+<div class="contact-form">
+  <section>
+    <div class="container">
+      <h3>Send Us a Message</h3>
+      <!-- ✅ Fixed Contact Form -->
+      <form id="contactForm" action="https://formspree.io/f/xeorowdy" method="POST">
+        <div class="form-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" name="name" required>
         </div>
-    </section>
+        <div class="form-group">
+          <label for="contactEmail">Your Email</label>
+          <input type="email" id="contactEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Your Message</label>
+          <textarea id="contactMessage" name="message" rows="5" required></textarea>
+        </div>
+        <!-- ✅ Formspree hidden field -->
+        <input type="hidden" name="_subject" value="New Contact Request">
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+
+
+
+                       
+     </section>
 
     <!-- Footer -->
     <footer>
@@ -1525,25 +1532,7 @@ A professionally managed travel solution for individuals, families, corporates, 
                 lastScrollTop = scrollTop;
             });
             
-            // Form Submission
-            const bookingForm = document.getElementById('bookingForm');
-            const contactForm = document.getElementById('contactForm');
-            
-            if (bookingForm) {
-                bookingForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Thank you for your booking request! Our team will contact you shortly.');
-                    bookingForm.reset();
-                });
-            }
-            
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Thank you for your message! We will get back to you soon.');
-                    contactForm.reset();
-                });
-            }
+           
             
             // Service Card Hover Effect
             const serviceCards = document.querySelectorAll('.service-card');
@@ -1560,11 +1549,7 @@ A professionally managed travel solution for individuals, families, corporates, 
             });
         });
     </script>
-    <!-- ✅ Load EmailJS v4 (only this, remove old sdk) -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<!-- ✅ Your script LAST -->
-<script src="index.js"></script>
+ 
 
 </body>
 </html>
